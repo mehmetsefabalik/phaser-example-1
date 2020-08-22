@@ -4,10 +4,25 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build:client:dev": "cd src/client && npm run build:dev",
+    "build:client:prod": "cd src/client && npm run build:prod",
+    "build:server:dev": "cd src/server && npm run build:dev",
+    "build:server:prod": "cd src/server && npm run build:prod",
     "start": "node dist/server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "mehmetsefabalik@gmail.com",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^3.2.1",
+    "fastify-static": "^3.2.0",
+    "phaser": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.6.0",
+    "typescript": "^4.0.2",
+    "ts-loader": "^6.2.1",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  }
 }

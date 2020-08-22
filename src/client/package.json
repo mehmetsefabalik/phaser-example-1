@@ -1,0 +1,14 @@
+{
+  "name": "client",
+  "version": "0.0.1",
+  "author": "mehmetsefabalik@gmail.com",
+  "private": true,
+  "scripts": {
+    "build:dev": "npx webpack --mode=development",
+    "build:prod": "npx webpack --mode=production",
+    "cov": "npx jest --collect-coverage"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.12"
+  }
+}

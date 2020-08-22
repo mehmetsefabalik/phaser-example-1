@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "author": "mehmetsefabalik@gmail.com",
+  "private": true,
+  "scripts": {
+    "build:dev": "tsc --watch",
+    "build:prod": "tsc",
+    "start:dev": "NODE_ENV=development nodemon ../../dist/server/index",
+    "start:prod": "NODE_ENV=production node ../../dist/server/index",
+    "test": "npx jest",
+    "cov": "npx jest --collect-coverage"
+  }
+}
