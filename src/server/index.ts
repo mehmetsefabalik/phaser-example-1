@@ -10,16 +10,15 @@ const createServer = (fastify: any): FastifyInstance<Server, IncomingMessage, Se
 const server: FastifyInstance = createServer(fastify);
 
 server.register(fastifyStatic, {
-  root: path.join(__dirname, "../client"),
-  serve: false,
+  root: path.join(__dirname, "../../public"),
 });
 
 server.get('/', (req: any, reply: any) => {
-  return reply.sendFile('index.html', path.join(__dirname, "../../public"));
+  return reply.sendFile('index.html');
 })
 
 server.get('/source', (req: any, reply: any) => {
-  return reply.sendFile('index.js')
+  return reply.sendFile('index.js', path.join(__dirname, "../client"))
 })
 
 server.listen(3000, (err) => {

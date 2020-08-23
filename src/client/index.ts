@@ -1,6 +1,6 @@
 import Phaser from "phaser";
 
-var config = {
+    var config = {
     type: Phaser.AUTO,
     width: 800,
     height: 600,
@@ -59,7 +59,7 @@ function create ()
     player = this.physics.add.sprite(100, 450, 'dude');
 
     //  Player physics properties. Give the little guy a slight bounce.
-    player.setBounce(0.2);
+    player.setBounce(0.5);
     player.setCollideWorldBounds(true);
 
     //  Our player animations, turning, walking left and walking right.
